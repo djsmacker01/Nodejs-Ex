@@ -45,32 +45,34 @@
 // houseTwo(houseThree)
 
 //Code 04
-function houseOne(){
-    setTimeout(() => {
-        console.log('Paper delivered to house 1')
-        setTimeout(() => {
-            console.log('Paper delivered to house 2')
-            setTimeout(() => {
-                console.log('Paper delivered to house 3')
-            }, 3000)
-        }, 4000)
-    }, 5000)
-}
-houseOne()
+// function houseOne(){
+//     setTimeout(() => {
+//         console.log('Paper delivered to house 1')
+//         setTimeout(() => {
+//             console.log('Paper delivered to house 2')
+//             setTimeout(() => {
+//                 console.log('Paper delivered to house 3')
+//             }, 3000)
+//         }, 4000)
+//     }, 5000)
+// }
+// houseOne()
 
-//Code 05
-// const promise = new Promise((resolve, reject) => {
-//     const error = false
-//     if(!error){
-//         resolve('Promise has been fullfilled')
-//     }else{
-//         reject('Error: Operation has failed')
-//     }
-// })
-// console.log(promise)
-// promise
-//     .then(data => console.log(data))
-//     .catch(err => console.log(err))
+//Code 05 Using Promise Implementation
+const promise = new Promise((resolve, reject) => {
+    const error = true
+    if(!error){
+        resolve('Promise has been fullfilled')
+    }
+    else
+    {
+        reject('Error: Operation has failed')
+    }
+})
+console.log(promise)
+promise
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
 
 //Code 06
 // function houseOne(){
