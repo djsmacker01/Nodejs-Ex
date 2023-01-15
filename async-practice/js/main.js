@@ -112,6 +112,7 @@ function houseOne(){
         }, 1000)
     })
 }
+
 function houseTwo(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -119,6 +120,7 @@ function houseTwo(){
         }, 5000)
     })
 }
+
 function houseThree(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -127,24 +129,33 @@ function houseThree(){
     })
 }
 
-// async function getPaid() {
-//   const houseOneWait = await houseOne();
-//   const houseTwoWait = await houseTwo();
-//   const houseThreeWait = await houseThree();
-//   console.log(houseOneWait);
-//   console.log(houseTwoWait);
-//   console.log(houseThreeWait);
-// }
+function houseFour(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve('Paper delivered to house 4')
+        }, 9000)
+    })
+}
 
-// getPaid();
+async function getPaid() {
+  const houseOneWait = await houseOne();
+  const houseTwoWait = await houseTwo();
+  const houseThreeWait = await houseThree();
+  const houseFourWait = await houseFour();
+  console.log(houseOneWait);
+  console.log(houseTwoWait);
+  console.log(houseThreeWait);
+  console.log(houseFourWait);
+}
+
+getPaid();
 
 //Code 08
-async function getACuteDogPhoto(){
-    const res = await fetch('https://dog.ceo/api/breeds/image/random')
-    const data = await res.json()
-    // const err = await reject('Error')
-    console.log(data)
-    console.log(err);
+// async function getACuteDogPhoto(){
+//     const res = await fetch('https://dog.ceo/api/breeds/image/random')
+//     const data = await res.json()
+//     console.log(data)
+//     console.log(err);
 
-}
-getACuteDogPhoto()
+// }
+// getACuteDogPhoto()
